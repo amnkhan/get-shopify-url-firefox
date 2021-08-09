@@ -1,0 +1,47 @@
+html,
+body {
+  font-family: "Roboto Mono", monospace;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  min-width: 280px;
+  height: auto;
+  background-color: #1c1c1e;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 10px;
+}
+.wrapper p {
+  color: #fff;
+  display: flex;
+  font-weight: 400;
+  margin: 0;
+  border-radius: 4px;
+  padding: 6px 6px 10px 6px;
+  margin-bottom: 6px;
+  border-bottom: 1px solid #747474;
+  line-height: 1.6;
+  text-transform: lowercase;
+  align-items: center;
+}
+.wrapper p:last-child {
+  border-bottom: 0px !important;
+  margin-bottom: 0;
+}
+.wrapper .fas {
+  font-size: 16px;
+  color: #32f78a;
+  margin-right: 8px;
+}
+.uppercase {
+  text-transform: uppercase !important;
+}
+.normal-case {
+  text-transform: inherit !important;
+}
+.wrapper .fas.fa-exclamation-circle {
+  color: #e6b11c;
+}
