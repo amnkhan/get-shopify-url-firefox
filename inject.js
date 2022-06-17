@@ -1,8 +1,9 @@
 // get Shopify properties from DOM
 function parseShopifyData() {
   let data = {};
-  if (window.Shopify) {
+  if (window.Shopify || window.__st) {
     data.shopify = JSON.parse(JSON.stringify(window.Shopify)) || null;
+    data.product = JSON.parse(JSON.stringify(window.__st)) || null;
   } else {
     data.shopify = false;
   }
@@ -10,7 +11,5 @@ function parseShopifyData() {
 }
 
 // Pass that Shopify properties to Background.js
-setInterval(() => {
-  let essential = parseShopifyData();
-  window.postMessage({ type: "FROM_PAGE", essential });
-}, 500);
+let essential = parseShopifyData();
+window.postMessage({ type: "FROM_PAGE", essential });
